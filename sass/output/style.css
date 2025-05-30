@@ -215,8 +215,26 @@ h6 {
   color: #e25300;
 }
 
+.color-purple {
+  color: #5133a6;
+}
+
 .background-color-main {
   background-color: #1a173d;
+}
+
+.background-color-orange {
+  background-color: #e25300;
+}
+
+.background-color-orange-gradient {
+  background-color: rgb(245, 194, 146);
+  background-color: radial-gradient(rgb(245, 194, 146) 25%, rgb(241, 150, 65) 85%);
+}
+
+.background-color-purple-gradient {
+  background-color: rgb(133, 100, 187);
+  background-color: linear-gradient(rgb(133, 100, 187) 0%, rgb(102, 44, 197) 85%);
 }
 
 :root {

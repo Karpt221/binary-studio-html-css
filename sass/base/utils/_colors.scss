@@ -8,6 +8,24 @@
   color: colors.$main-orange;
 }
 
-.background-color-main{
+.color-purple {
+  color: colors.$main-purple;
+}
+
+.background-color-main {
   background-color: colors.$background-color;
+}
+
+.background-color-orange {
+  background-color: colors.$main-orange;
+}
+
+.background-color-orange-gradient {
+  background-color: colors.$orange-gradient-fallback;
+  background-color: colors.$orange-gradient;
+}
+
+.background-color-purple-gradient {
+  background-color: colors.$purple-gradient-fallback;
+  background-color: colors.$purple-gradient;
 }

@@ -1,9 +1,9 @@
 @use '../../abstracts/variables/breakpoints';
+@use '../../abstracts/mixins/flex';
 
 .menu {
   &__list {
     display: none;
-    gap: 32px;
   }
 
   &__button {
@@ -21,6 +21,7 @@
       bottom: 0;
       width: 0;
       height: 4px;
+      border-radius: 4px;
       background-color: var(--main-orange);
       transition: width 0.1s ease-out;
     }
@@ -37,7 +38,7 @@
 
 @media screen and (min-width: breakpoints.$breakpoint-tablet-max) {
   .menu__list {
-    display: flex;
+    @include flex.flex-row($gap: 32px);
   }
   .menu__button {
     display: none;

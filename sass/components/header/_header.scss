@@ -1,7 +1,8 @@
 @use 'menu';
 @use 'logo';
+@use '../../abstracts/mixins/flex';
 
 .header {
+  @include flex.flex-row($align: center, $justify: space-between);
   padding-top: 30px;
-  justify-content: space-between;
 }

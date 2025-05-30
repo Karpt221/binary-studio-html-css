@@ -253,4 +253,10 @@ body {
   background-color: var(--base-background-color);
 }
 
+.main-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
 /*# sourceMappingURL=style.css.map */

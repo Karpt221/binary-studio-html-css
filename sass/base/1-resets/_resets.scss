@@ -16,8 +16,8 @@ ul {
   margin: 0;
 }
 
-ol[role='list'],
-ul[role='list'] {
+ol,
+ul {
   list-style: none;
   padding-inline: 0;
 }
@@ -47,6 +47,16 @@ textarea,
 select,
 pre {
   font: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 p,

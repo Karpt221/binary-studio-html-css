@@ -1,6 +1,6 @@
 @use '../abstracts/variables/breakpoints';
 
-.main-wrapper{
+.main-wrapper {
   max-width: breakpoints.$breakpoint-desktop-max;
   margin: 0 auto;
   padding: 0 40px;

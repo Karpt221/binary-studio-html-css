@@ -1,0 +1,238 @@
+:root {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p,
+ol,
+ul {
+  margin: 0;
+}
+
+ol[role=list],
+ul[role=list] {
+  list-style: none;
+  padding-inline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  max-inline-size: 100%;
+}
+
+input,
+button,
+textarea,
+select,
+pre {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../../fonts/ubuntu-regular-webfont.woff") format("woff2"), url("../../fonts/ubuntu-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Righteous";
+  src: url("../../fonts/righteous-regular-webfont.woff2") format("woff2"), url("../../fonts/righteous-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.text-inner {
+  font-family: "Ubuntu";
+  font-size: 18px;
+  line-height: 1.17;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-inner-small {
+  font-family: "Ubuntu";
+  font-size: 16px;
+  line-height: 1.19;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-heading-1 {
+  font-family: "Righteous";
+  font-size: 70px;
+  line-height: 1.24;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-heading-2 {
+  font-family: "Righteous";
+  font-size: 48px;
+  line-height: 1.25;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-heading-3 {
+  font-family: "Righteous";
+  font-size: 36px;
+  line-height: 1.25;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-subheading {
+  font-family: "Righteous";
+  font-size: 34px;
+  line-height: 1.235;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-title {
+  font-family: "Righteous";
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-button {
+  font-family: "Righteous";
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.05em;
+}
+
+.text-button-small {
+  font-family: "Righteous";
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.05em;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("../../fonts/icomoon.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cat-paw:before {
+  content: "\e900";
+  color: #e25300;
+}
+
+.icon-facebook:before {
+  content: "\e901";
+  color: #ffffff;
+}
+
+.icon-instagram:before {
+  content: "\e902";
+  color: #ffffff;
+}
+
+.icon-lessons:before {
+  content: "\e903";
+  color: #ffffff;
+}
+
+.icon-likes:before {
+  content: "\e904";
+  color: #ffffff;
+}
+
+.icon-play:before {
+  content: "\e905";
+  color: #e25300;
+}
+
+.icon-student-hat:before {
+  content: "\e906";
+  color: #ffffff;
+}
+
+.icon-youtube:before {
+  content: "\e907";
+  color: #ffffff;
+}
+
+.color-white {
+  color: #ffffff;
+}
+
+.color-orange {
+  color: #e25300;
+}
+
+.background-color-main {
+  background-color: #1a173d;
+}
+
+:root {
+  box-sizing: border-box;
+  --base-font-family: Arial;
+  --base-text-color: white;
+  --base-background-color: black;
+}
+
+body {
+  height: 100vh;
+  font-family: var(--base-font-family);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--base-text-color);
+  background-color: var(--base-background-color);
+}
+
+/*# sourceMappingURL=style.css.map */

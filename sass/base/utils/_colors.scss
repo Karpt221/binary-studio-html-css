@@ -1,0 +1,13 @@
+@use '../../abstracts/variables/colors';
+
+.color-white {
+  color: colors.$white;
+}
+
+.color-orange {
+  color: colors.$main-orange;
+}
+
+.background-color-main{
+  background-color: colors.$background-color;
+}

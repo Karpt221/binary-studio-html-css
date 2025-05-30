@@ -1,0 +1,14 @@
+$background-color: #1a173d;
+$main-purple: #5133a6;
+$main-orange: #e25300;
+$white: #ffffff;
+$purpule-gradient-fallback: rgb(133, 100, 187);
+$purpule-gradient: linear-gradient(
+  rgb(133, 100, 187) 0%,
+  rgb(102, 44, 197) 85%
+);
+$orange-gradient-fallback: rgb(245, 194, 146);
+$orange-gradient: radial-gradient(
+  rgb(245, 194, 146) 25%,
+  rgb(241, 150, 65) 85%
+);

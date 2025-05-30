@@ -1,0 +1,41 @@
+@use '../../abstracts/mixins/flex';
+
+.intro {
+  @include flex.flex-column($align: center);
+
+  &__image {
+    height: 262px;
+    transform: scaleX(-1);
+    z-index: 1;
+  }
+
+  &__subtitle-image {
+    display: none;
+  }
+
+  &__content {
+    position: relative;
+    bottom: 50px;
+    @include flex.flex-column();
+    gap: 10px;
+    padding: 25px;
+    padding-top: 70px;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__subtitle{
+    padding: 0 15px;
+  }
+
+  &__button--alt {
+    @include flex.flex-row-center-all($gap: 5px);
+    border: 1px solid;
+  }
+
+  &__button-icon {
+    font-size: 20px;
+  }
+}

@@ -1,6 +1,24 @@
+@use '../../abstracts/variables/breakpoints';
+@use '../../abstracts/mixins/text-variant.scss';
+
 .logo {
   gap: 10px;
   &__image {
     width: 40px;
+  }
+}
+
+@media screen and (min-width: breakpoints.$breakpoint-tablet-max) {
+  .logo {
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: breakpoints.$breakpoint-mobile-max) {
+  .logo__image {
+    width: 60px;
+  }
+  .logo__title {
+    @include text-variant.text-variant('Righteous', 36px, 1.25);
   }
 }

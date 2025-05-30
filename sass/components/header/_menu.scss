@@ -43,3 +43,9 @@
     display: none;
   }
 }
+
+@media screen and (min-width: breakpoints.$breakpoint-mobile-max) {
+  .menu__button {
+    font-size: 60px;
+  }
+}

@@ -343,12 +343,17 @@ body {
   display: none;
 }
 
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 820px) {
   .menu__list {
     display: flex;
   }
   .menu__button {
     display: none;
+  }
+}
+@media screen and (min-width: 400px) {
+  .menu__button {
+    font-size: 60px;
   }
 }
 .logo {
@@ -358,6 +363,23 @@ body {
   width: 40px;
 }
 
+@media screen and (min-width: 820px) {
+  .logo {
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 400px) {
+  .logo__image {
+    width: 60px;
+  }
+  .logo__title {
+    font-family: "Righteous";
+    font-size: 36px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
 .header {
   padding-top: 30px;
   justify-content: space-between;

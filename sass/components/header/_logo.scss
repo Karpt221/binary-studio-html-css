@@ -1,8 +1,9 @@
 @use '../../abstracts/variables/breakpoints';
 @use '../../abstracts/mixins/text-variant.scss';
+@use '../../abstracts/mixins/flex';
 
 .logo {
-  gap: 10px;
+  @include flex.flex-row($align: center, $gap: 10px);
   &__image {
     width: 40px;
   }

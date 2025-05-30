@@ -20,10 +20,10 @@
 
 .background-color-orange-gradient {
   background-color: var(--orange-gradient-fallback);
-  background-color: var(--orange-gradient);
+  background-image: var(--orange-gradient);
 }
 
 .background-color-purple-gradient {
   background-color: var(--purple-gradient-fallback);
-  background-color: var(--purple-gradient);
+  background-image: var(--purple-gradient);
 }

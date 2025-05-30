@@ -1,0 +1,45 @@
+@use '../../abstracts/variables/breakpoints';
+
+.menu {
+  &__list {
+    display: none;
+    gap: 32px;
+  }
+
+  &__button {
+    font-size: 40px;
+  }
+
+  &__link {
+    position: relative;
+    padding-bottom: 10px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 4px;
+      background-color: var(--main-orange);
+      transition: width 0.1s ease-out;
+    }
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+  &__toggle {
+    display: none;
+  }
+}
+
+@media screen and (min-width: breakpoints.$breakpoint-tablet-max) {
+  .menu__list {
+    display: flex;
+  }
+  .menu__button {
+    display: none;
+  }
+}

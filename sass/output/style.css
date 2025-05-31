@@ -60,6 +60,10 @@ a {
   color: inherit;
 }
 
+input {
+  border: none;
+}
+
 p,
 h1,
 h2,
@@ -318,6 +322,10 @@ body {
   margin-bottom: 100px;
 }
 
+.spacing-xxlg {
+  margin-bottom: 190px;
+}
+
 .vertical-spacing-line-sm {
   margin: 20px 0;
   height: 4px;
@@ -331,7 +339,6 @@ body {
 
 .button {
   padding: 10px 16px;
-  border-radius: 24px;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 .button::before {
@@ -745,15 +752,13 @@ body {
   transform: skewY(6deg);
   z-index: -1;
   border-radius: 25px;
+  background: linear-gradient(rgb(133, 100, 187) 0%, rgb(102, 44, 197) 85%);
 }
 .opportunity:hover {
   color: #5133a6;
 }
 .opportunity:hover::before {
   background: radial-gradient(rgb(245, 194, 146) 25%, rgb(241, 150, 65) 85%);
-}
-.opportunity::before {
-  background: linear-gradient(rgb(133, 100, 187) 0%, rgb(102, 44, 197) 85%);
 }
 .opportunity__title {
   text-align: center;
@@ -905,6 +910,91 @@ body {
     min-width: 250px;
     height: clamp(15.563rem, 14.634rem + 1.935vw, 16.375rem);
     width: clamp(20.438rem, 19.152rem + 2.679vw, 21.563rem);
+  }
+}
+.subscribe {
+  position: relative;
+  overflow: visible;
+  padding: 60px 26px 26px;
+}
+.subscribe__subtitle, .subscribe__subtitle-alt {
+  margin-bottom: 20px;
+}
+.subscribe__subtitle-alt {
+  display: none;
+}
+.subscribe__button {
+  padding: 10px 36px;
+}
+.subscribe__email {
+  padding: 10px 33px;
+}
+.subscribe__image {
+  height: clamp(15.688rem, 11.689rem + 16.402vw, 19.563rem);
+  position: absolute;
+  top: -170px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(-1);
+}
+.subscribe__form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 10px;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 391px) {
+  .subscribe {
+    padding-left: 42px;
+    padding-right: 42px;
+    min-width: 400px;
+  }
+  .subscribe__image {
+    top: -195px;
+    transform: translateX(15%) scaleX(-1);
+    height: clamp(19.563rem, 4.134rem + 32.143vw, 33.063rem);
+  }
+  .subscribe__title {
+    font-size: 36px;
+    margin-bottom: 11px;
+  }
+  .subscribe__subtitle {
+    display: none;
+  }
+  .subscribe__subtitle-alt {
+    display: block;
+  }
+  .subscribe__form {
+    max-width: 600px;
+    gap: 0;
+    flex-direction: row;
+  }
+  .subscribe__email {
+    min-width: 0;
+    flex: 1;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .subscribe__button {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+}
+@media screen and (min-width: 769px) {
+  .subscribe {
+    max-width: 980px;
+  }
+  .subscribe__title {
+    font-size: 48px;
+  }
+  .subscribe__subtitle-alt {
+    width: 650px;
+  }
+  .subscribe__image {
+    top: -175px;
+    transform: translateX(42%) scaleX(-1);
   }
 }
 

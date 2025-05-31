@@ -1,0 +1,88 @@
+@use '../../abstracts/variables/breakpoints';
+@use '../../abstracts/mixins/flex';
+
+.subscribe {
+  position: relative;
+  overflow: visible;
+  padding: 60px 26px 26px;
+
+  &__subtitle,
+  &__subtitle-alt {
+    margin-bottom: 20px;
+  }
+  &__subtitle-alt {
+    display: none;
+  }
+  &__button {
+    padding: 10px 36px;
+  }
+
+  &__email {
+    padding: 10px 33px;
+  }
+  &__image {
+    height: clamp(15.688rem, 11.689rem + 16.402vw, 19.563rem);
+    position: absolute;
+    top: -170px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(-1);
+  }
+
+  &__form {
+    @include flex.flex-column($gap: 10px);
+  }
+}
+
+@media screen and (min-width: breakpoints.$breakpoint-mobile-max) {
+  .subscribe {
+    padding-left: 42px;
+    padding-right: 42px;
+    min-width: 400px;
+    &__image {
+      top: -195px;
+      transform: translateX(15%) scaleX(-1);
+      height: clamp(19.563rem, 4.134rem + 32.143vw, 33.063rem);
+    }
+    &__title {
+      font-size: 36px;
+      margin-bottom: 11px;
+    }
+    &__subtitle {
+      display: none;
+    }
+    &__subtitle-alt {
+      display: block;
+    }
+    &__form {
+      max-width: 600px;
+      gap: 0;
+      flex-direction: row;
+    }
+    &__email {
+      min-width: 0;
+      flex: 1;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+    &__button {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+  }
+}
+
+@media screen and (min-width: breakpoints.$breakpoint-tablet-max) {
+  .subscribe {
+    max-width: 980px;
+    &__title {
+      font-size: 48px;
+    }
+    &__subtitle-alt {
+      width:650px;
+    }
+    &__image {
+      top: -175px;
+      transform: translateX(42%) scaleX(-1);
+    }
+  }
+}

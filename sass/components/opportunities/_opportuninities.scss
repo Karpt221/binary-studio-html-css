@@ -1,0 +1,50 @@
+@use '../../abstracts/variables/colors';
+
+.opportunities {
+  &__title {
+    margin-bottom: 15px;
+  }
+}
+
+.opportunity {
+  position: relative;
+  padding: 130px 30px 30px;
+  overflow: visible;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: skewY(6deg);
+    z-index: -1;
+    border-radius: 25px;
+  }
+  &--orange::before {
+    background: colors.$orange-gradient;
+  }
+  &--purple::before {
+    background: colors.$purple-gradient;
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 19px;
+  }
+  &__image {
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__image--cat-house {
+    height: 235px;
+  }
+  &__image--cat-ufo {
+    height: 250px;
+  }
+  &__image--cat-cable {
+    height: 200px;
+  }
+}

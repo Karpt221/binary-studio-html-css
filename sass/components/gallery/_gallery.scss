@@ -1,0 +1,70 @@
+@use '../../abstracts/variables/colors';
+@use '../../abstracts/variables/breakpoints';
+.gallery {
+  text-align: end;
+  &__title {
+    margin-bottom: 13px;
+  }
+
+  &__images {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    place-items: center;
+  }
+
+  & .image > img {
+    height: clamp(14.813rem, 14.039rem + 3.175vw, 15.563rem);
+    width: clamp(19.5rem, 18.533rem + 3.968vw, 20.438rem);
+  }
+}
+
+.image {
+  max-width: max-content;
+  position: relative;
+  cursor: pointer;
+  & > img {
+    min-width: 200px;
+  }
+  &::before {
+    content: '';
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 12px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  &:hover::before {
+    background-color: colors.$hover-purple;
+  }
+}
+
+@media screen and (min-width: breakpoints.$breakpoint-mobile-max) {
+  .gallery {
+    &__images {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 34px;
+    }
+     & .image > img {
+      min-width: 240px;
+    }
+  }
+}
+
+@media screen and (min-width: breakpoints.$breakpoint-tablet-max) {
+  .gallery {
+    &__images {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 15px;
+    }
+    & .image > img {
+      min-width: 250px;
+      height: clamp(15.563rem, 14.634rem + 1.935vw, 16.375rem);
+      width: clamp(20.438rem, 19.152rem + 2.679vw, 21.563rem);
+    }
+  }
+}

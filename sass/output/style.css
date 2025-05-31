@@ -298,19 +298,23 @@ body {
   border-radius: 4px;
 }
 
-.section-spacing-sm {
+.spacing-xsm {
+  margin-bottom: 15px;
+}
+
+.spacing-sm {
   margin-bottom: 30px;
 }
 
-.section-spacing-md {
+.spacing-md {
   margin-bottom: 50px;
 }
 
-.section-spacing-lg {
+.spacing-lg {
   margin-bottom: 80px;
 }
 
-.section-spacing-xlg {
+.spacing-xlg {
   margin-bottom: 100px;
 }
 
@@ -724,10 +728,6 @@ body {
     flex-shrink: 0;
   }
 }
-.opportunities__title {
-  margin-bottom: 15px;
-}
-
 .opportunity {
   position: relative;
   padding: 130px 30px 30px;
@@ -828,6 +828,7 @@ body {
     padding: 220px 30px 60px 30px;
   }
   .opportunity__image {
+    min-width: 290px;
     top: -100px;
     left: 50%;
     transform: translateX(-50%);
@@ -843,6 +844,67 @@ body {
   }
   .opportunity::before {
     transform: skewY(3deg);
+  }
+}
+.gallery {
+  text-align: end;
+}
+.gallery__title {
+  margin-bottom: 13px;
+}
+.gallery__images {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  place-items: center;
+}
+.gallery .image > img {
+  height: clamp(14.813rem, 14.039rem + 3.175vw, 15.563rem);
+  width: clamp(19.5rem, 18.533rem + 3.968vw, 20.438rem);
+}
+
+.image {
+  max-width: max-content;
+  position: relative;
+  cursor: pointer;
+}
+.image > img {
+  min-width: 200px;
+}
+.image::before {
+  content: "";
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 12px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.image:hover::before {
+  background-color: rgba(96, 68, 176, 0.7);
+}
+
+@media screen and (min-width: 391px) {
+  .gallery__images {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 34px;
+  }
+  .gallery .image > img {
+    min-width: 240px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .gallery__images {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .gallery .image > img {
+    min-width: 250px;
+    height: clamp(15.563rem, 14.634rem + 1.935vw, 16.375rem);
+    width: clamp(20.438rem, 19.152rem + 2.679vw, 21.563rem);
   }
 }
 

@@ -1,0 +1,71 @@
+@use '../../abstracts/mixins/flex';
+@use '../../abstracts/variables/colors';
+@use '../../abstracts/variables/breakpoints';
+
+.footer-spcing {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.footer {
+  &__navigation {
+    @include flex.flex-column($gap: 28px);
+  }
+
+  &__link {
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: colors.$main-orange;
+    }
+  }
+
+  &__content {
+    & .social {
+      font-size: 35px;
+      margin-bottom: 20px;
+      @include flex.flex-row($gap: 50px, $justify: center);
+      &__link {
+        &::before {
+          transition: color 0.3s ease-in-out;
+        }
+
+        &:hover::before {
+          color: colors.$main-orange;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: breakpoints.$breakpoint-mobile-max) {
+  .footer-spcing {
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+  .footer {
+    &__navigation {
+      @include flex.flex-row(
+        $gap: clamp(0.625rem, -5.179rem + 23.81vw, 6.25rem),
+        $justify: space-between
+      );
+    }
+  }
+}
+
+@media screen and (min-width: breakpoints.$breakpoint-tablet-max) {
+  .footer-spcing {
+    margin-top: 100px;
+    margin-bottom: 60px;
+  }
+  .footer {
+    &__content {
+      @include flex.flex-row($justify: space-between, $align: center);
+      & .social {
+        margin: 0;
+      }
+    }
+    &__navigation {
+      gap: clamp(0.625rem, -2.232rem + 5.952vw, 3.125rem);
+    }
+  }
+}

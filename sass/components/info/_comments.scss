@@ -32,6 +32,7 @@
   }
 
   &__radio-lable {
+    cursor: pointer;
     transition: background-color 0.2s ease-in-out;
     display: inline-block;
     width: 12px;

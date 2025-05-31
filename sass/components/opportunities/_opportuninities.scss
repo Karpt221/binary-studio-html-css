@@ -1,0 +1,129 @@
+@use '../../abstracts/variables/breakpoints';
+@use '../../abstracts/variables/colors';
+
+.opportunity {
+  position: relative;
+  padding: 130px 30px 30px;
+  overflow: visible;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: skewY(6deg);
+    z-index: -1;
+    border-radius: 25px;
+    background: colors.$purple-gradient;
+  }
+  &:hover {
+    color: colors.$main-purple;
+    &::before {
+      background: colors.$orange-gradient;
+    }
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 19px;
+  }
+  &__image {
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__image--cat-house {
+    height: 235px;
+  }
+  &__image--cat-ufo {
+    height: 250px;
+  }
+  &__image--cat-cable {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: breakpoints.$breakpoint-mobile-max) {
+  .opportunities {
+    &__cards {
+      padding: 0 60px;
+    }
+    &__title {
+      font-size: 36px;
+      width: 60%;
+    }
+    &__subtitle {
+      font-size: 18px;
+      width: 80%;
+    }
+  }
+  .opportunity {
+    padding: 60px 30% 60px 30px;
+
+    &__title {
+      font-size: 34px;
+    }
+    &__description {
+      font-size: 18px;
+    }
+    &__image {
+      top: 0;
+      left: 70%;
+      transform: translateX(0%);
+    }
+    &__image--cat-house {
+      height: 250px;
+    }
+
+    &__image--cat-cable {
+      height: 230px;
+    }
+
+    &::before {
+      transform: skewY(3deg);
+    }
+  }
+}
+
+@media screen and (min-width: breakpoints.$breakpoint-tablet-max) {
+  .opportunities {
+    &__cards {
+      display: flex;
+      padding: 0;
+      gap: 15px;
+    }
+    &__title {
+      font-size: 48px;
+    }
+    &__subtitle {
+      font-size: 18px;
+    }
+  }
+
+  .opportunity {
+    flex: 1;
+    padding: 220px 30px 60px 30px;
+    &__image {
+      min-width: 290px;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &__image--cat-house {
+      height: 320px;
+    }
+    &__image--cat-ufo {
+      height: 340px;
+    }
+    &__image--cat-cable {
+      height: 290px;
+    }
+
+    &::before {
+      transform: skewY(3deg);
+    }
+  }
+}

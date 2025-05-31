@@ -1,0 +1,52 @@
+@use '../../abstracts/variables/breakpoints';
+@use '../../abstracts/mixins/flex';
+
+.menu {
+  &__list {
+    display: none;
+  }
+
+  &__button {
+    font-size: 40px;
+  }
+
+  &__link {
+    position: relative;
+    padding-bottom: 10px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 4px;
+      border-radius: 4px;
+      background-color: var(--main-orange);
+      transition: width 0.1s ease-out;
+    }
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+  &__toggle {
+    display: none;
+  }
+}
+
+@media screen and (min-width: breakpoints.$breakpoint-tablet-max) {
+  .menu__list {
+    @include flex.flex-row($gap: clamp(0.063rem, -2.009rem + 4.315vw, 1.875rem));
+  }
+  .menu__button {
+    display: none;
+  }
+}
+
+@media screen and (min-width: breakpoints.$breakpoint-mobile-max) {
+  .menu__button {
+    font-size: 60px;
+  }
+}

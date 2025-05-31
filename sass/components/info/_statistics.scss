@@ -1,0 +1,52 @@
+@use '../../abstracts/mixins/flex';
+@use '../../abstracts/variables/breakpoints';
+
+.statistics {
+  @include flex.flex-column($gap: 15px);
+}
+
+.info {
+  padding: 20px 35px;
+}
+
+.stat_item {
+  display: flex;
+  & .stat__item-icon {
+    font-size: 25px;
+    margin-right: 20px;
+  }
+  & .stat__item-title {
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: breakpoints.$breakpoint-mobile-max) {
+  .statistics {
+    @include flex.flex-row($justify: space-around);
+  }
+
+  .stat_item {
+    @include flex.flex-column($gap: 15px, $align: center);
+
+    & .stat__item-title {
+      font-size: 25px;
+      margin: 0;
+      order: 1;
+    }
+    & .stat__item-icon {
+      font-size: 35px;
+      margin: 0;
+      order: 2;
+    }
+    & .stat__item-value {
+      font-size: 35px;
+      order: 3;
+    }
+  }
+}
+
+@media screen and (min-width: breakpoints.$breakpoint-tablet-max) {
+  .statistics {
+    flex-grow: 1;
+  }
+}

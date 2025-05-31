@@ -1,0 +1,7 @@
+@mixin text-variant($family, $size, $line-height) {
+  font-family: $family;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: 400;
+  font-style: normal;
+}

@@ -1,0 +1,61 @@
+.button {
+  padding: 10px 16px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+
+  &::before {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+      border-color 0.3s ease-in-out;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__icon {
+    &::before {
+      color: var(--main-orange);
+      transition: color 0.3s ease-in-out;
+    }
+  }
+
+  &--primary {
+    color: var(--main-white);
+    background-color: var(--main-orange);
+
+    &:hover {
+      background-color: var(--hover-orange);
+      &::before {
+        background-color: var(--hover-orange);
+      }
+    }
+  }
+
+  &--secondary {
+    color: var(--main-orange);
+    background-color: transparent;
+
+    &:hover {
+      color: var(--main-white);
+      border-color: var(--main-white);
+      &::before {
+        color: var(--main-white);
+        border-color: var(--main-white);
+      }
+
+      & .button__icon {
+        &::before {
+          color: var(--main-white);
+        }
+      }
+    }
+  }
+
+  &.menu__link {
+    &:hover {
+      &::after {
+        width: 0%;
+      }
+    }
+  }
+}

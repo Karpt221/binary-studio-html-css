@@ -1,0 +1,24 @@
+@use '../../abstracts/variables/colors';
+@use '../../abstracts/variables/breakpoints';
+
+:root {
+  box-sizing: border-box;
+  --base-font-family: Arial;
+  --main-white: #{colors.$main-white};
+  --main-background-color: #{colors.$background-color};
+  --main-orange: #{colors.$main-orange};
+  --main-purple: #{colors.$main-purple};
+  --orange-gradient-fallback: #{colors.$orange-gradient-fallback};
+  --orange-gradient: #{colors.$orange-gradient};
+  --purple-gradient-fallback: #{colors.$purple-gradient-fallback};
+  --purple-gradient: #{colors.$purple-gradient};
+  --hover-orange: #{colors.$hover-orange};
+  color: var(--main-white);
+}
+
+body {
+  font-family: var(--base-font-family);
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: var(--main-background-color);
+}

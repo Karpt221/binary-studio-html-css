@@ -1,0 +1,25 @@
+@use '../../abstracts/variables/breakpoints';
+@use '../../abstracts/mixins/text-variant.scss';
+@use '../../abstracts/mixins/flex';
+
+.logo {
+  @include flex.flex-row($align: center, $gap: 10px);
+  &__image {
+    width: 40px;
+  }
+}
+
+@media screen and (min-width: breakpoints.$breakpoint-tablet-max) {
+  .logo {
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: breakpoints.$breakpoint-mobile-max) {
+  .logo__image {
+    width: 60px;
+  }
+  .logo__title {
+    font-size: 36px;
+  }
+}

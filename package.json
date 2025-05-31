@@ -1,0 +1,15 @@
+{
+  "name": "html-css",
+  "version": "1.0.0",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss ./sass/output/style.css" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/karpt221/html-css.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

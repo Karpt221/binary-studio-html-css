@@ -56,9 +56,11 @@
       padding: 0 60px;
     }
     &__title {
+      font-size: 36px;
       width: 60%;
     }
     &__subtitle {
+      font-size: 18px;
       width: 80%;
     }
   }
@@ -96,6 +98,12 @@
       display: flex;
       padding: 0;
       gap: 15px;
+    }
+     &__title {
+      font-size: 48px;
+    }
+    &__subtitle {
+      font-size: 18px;
     }
   }
 

@@ -1,0 +1,76 @@
+@use '../../abstracts/variables/colors';
+@use '../../abstracts/mixins/flex';
+@use '../../abstracts/variables/breakpoints';
+
+.comments {
+  &__radio-input {
+    display: none;
+  }
+
+  &__radio-input:checked + .comments__radio-lable {
+    background-color: colors.$main-orange;
+  }
+  &__navigation-dots {
+    @include flex.flex-row-center-all($gap: 15px);
+    padding-top: 25px;
+  }
+
+  & .comment {
+    display: none;
+  }
+
+  &:has(#dot-1:checked) .comment:nth-of-type(1) {
+    display: flex;
+  }
+
+  &:has(#dot-2:checked) .comment:nth-of-type(2) {
+    display: flex;
+  }
+
+  &:has(#dot-3:checked) .comment:nth-of-type(3) {
+    display: flex;
+  }
+
+  &__radio-lable {
+    transition: background-color 0.2s ease-in-out;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: colors.$main-white;
+    border-radius: 25px;
+  }
+}
+
+.comment {
+  @include flex.flex-row($gap: 15px, $align: flex-start);
+  &__image {
+    width: 50px;
+    background-image: colors.$orange-gradient;
+    border-radius: 100%;
+  }
+}
+
+@media screen and (min-width: breakpoints.$breakpoint-mobile-max) {
+  .comment {
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    &__image {
+      width: 100px;
+    }
+    &__username {
+      font-size: 24px;
+    }
+    &__text {
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (min-width: breakpoints.$breakpoint-tablet-max) {
+  .comment {
+    &__text {
+      max-width: 300px;
+    }
+  }
+}

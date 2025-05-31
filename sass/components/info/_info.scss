@@ -1,0 +1,16 @@
+@use 'statistics';
+@use 'comments';
+@use '../../abstracts/variables/breakpoints';
+
+@media screen and (min-width: breakpoints.$breakpoint-tablet-max) {
+  .info {
+    display: flex;
+    justify-content: space-between;
+  }
+  .info-separator {
+    width: 4px;
+    height: auto;
+    margin: 0 20px;
+    flex-shrink: 0;
+  }
+}

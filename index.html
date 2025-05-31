@@ -8,6 +8,7 @@
   </head>
   <body>
     <div class="main-wrapper">
+      <div class="spcing section-spacing-sm"></div>
       <header class="header">
         <div class="logo">
           <img class="logo__image" src="./images/logo-cat.png" alt="cat logo" />
@@ -17,24 +18,16 @@
         <nav class="menu">
           <ul class="menu__list">
             <li class="menu__item">
-              <a class="menu__link text-button-small color-white" href="#"
-                >About</a
-              >
+              <a class="menu__link text-button-small" href="#">About</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link text-button-small color-white" href="#"
-                >Contacts</a
-              >
+              <a class="menu__link text-button-small" href="#">Contacts</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link text-button-small color-white" href="#"
-                >Lessons</a
-              >
+              <a class="menu__link text-button-small" href="#">Lessons</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link text-button-small color-white" href="#"
-                >Gallery</a
-              >
+              <a class="menu__link text-button-small" href="#">Gallery</a>
             </li>
             <li class="menu__item">
               <a
@@ -62,7 +55,7 @@
           <div
             class="intro__content rounded-border-25 background-color-purple-gradient"
           >
-            <h2 class="intro__title text-heading-special color-white">
+            <h2 class="intro__title text-heading-special">
               Your puRRRfect educator
             </h2>
             <div class="intro__subtitle-layout">
@@ -71,7 +64,7 @@
                 src="./images/intro/subtitle-cat.png"
                 alt="cat with a ball of yarn"
               />
-              <p class="intro__subtitle text-inner-small color-white">
+              <p class="intro__subtitle text-inner-small">
                 Let's study, watch cool content and just have some fun together
               </p>
             </div>
@@ -89,7 +82,96 @@
             </div>
           </div>
         </section>
-        <section class="info"></section>
+        <div class="spcing section-spacing-md"></div>
+        <section
+          class="info rounded-border-25 background-color-purple-gradient"
+        >
+          <article class="statistics">
+            <section class="stat_item">
+              <i class="stat__item-icon icon-student-hat"></i>
+              <h3 class="stat__item-title text-button">Students</h3>
+              <span class="stat__item-value text-title">8500+</span>
+            </section>
+            <section class="stat_item">
+              <i class="stat__item-icon icon-lessons"></i>
+              <h3 class="stat__item-title text-button">Lessons</h3>
+              <span class="stat__item-value text-title">200+</span>
+            </section>
+            <section class="stat_item">
+              <i class="stat__item-icon icon-likes"></i>
+              <h3 class="stat__item-title text-button">Likes</h3>
+              <span class="stat__item-value text-title">99K+</span>
+            </section>
+          </article>
+          <div
+            class="info-separator vertical-spacing-line-sm background-color-white rounded-border-4"
+          ></div>
+          <article class="comments">
+            <section class="comment comment--1">
+              <img
+                src="./images/info/man-avatar.png"
+                alt="man with sunglasses"
+                class="comment__image"
+              />
+              <section class="comment__info">
+                <h3 class="comment__username text-button">John Doe</h3>
+                <p class="comment__text text-inner-small">
+                  It was really cool experience, I love it so much!
+                </p>
+              </section>
+            </section>
+            <section class="comment comment--2">
+              <img
+                src="./images/info/accounts-woman.png"
+                alt="man with sunglasses"
+                class="comment__image"
+              />
+              <section class="comment__info">
+                <h3 class="comment__username text-button">Sarah Smith</h3>
+                <p class="comment__text text-inner-small">
+                  I've really enjoyed the lessons and the videos are so fun! I'll recommend it to my friends!
+                </p>
+              </section>
+            </section>
+            <section class="comment comment--3">
+              <img
+                src="./images/info/man-headphones.png"
+                alt="man with sunglasses"
+                class="comment__image"
+              />
+              <section class="comment__info comment--3">
+                <h3 class="comment__username text-button">Sam Kollins</h3>
+                <p class="comment__text text-inner-small">
+                  Every day I'm trying to find some time and watch few lessons. It's hilarious! 
+                </p>
+              </section>
+            </section>
+            <section class="comments__navigation-dots">
+              <input
+                checked
+                class="comments__radio-input"
+                type="radio"
+                name="comments-navigation"
+                id="dot-1"
+              />
+              <label class="comments__radio-lable" for="dot-1"></label>
+              <input
+                class="comments__radio-input"
+                type="radio"
+                name="comments-navigation"
+                id="dot-2"
+              />
+              <label class="comments__radio-lable" for="dot-2"></label>
+              <input
+                class="comments__radio-input"
+                type="radio"
+                name="comments-navigation"
+                id="dot-3"
+              />
+              <label class="comments__radio-lable" for="dot-3"></label>
+            </section>
+          </article>
+        </section>
         <section class="opportunities"></section>
         <section class="gallery"></section>
         <section class="subscribe"></section>

@@ -1,7 +1,6 @@
 @use '../../abstracts/variables/breakpoints';
 @use '../../abstracts/variables/colors';
 
-
 .opportunity {
   position: relative;
   padding: 130px 30px 30px;
@@ -18,15 +17,13 @@
     transform: skewY(6deg);
     z-index: -1;
     border-radius: 25px;
+    background: colors.$purple-gradient;
   }
   &:hover {
     color: colors.$main-purple;
     &::before {
       background: colors.$orange-gradient;
     }
-  }
-  &::before {
-    background: colors.$purple-gradient;
   }
   &__title {
     text-align: center;

@@ -13,6 +13,7 @@
   --purple-gradient-fallback: #{colors.$purple-gradient-fallback};
   --purple-gradient: #{colors.$purple-gradient};
   --hover-orange: #{colors.$hover-orange};
+  color: var(--main-white);
 }
 
 body {
@@ -20,6 +21,5 @@ body {
   font-family: var(--base-font-family);
   font-size: 16px;
   line-height: 1.5;
-  color: var(--white);
   background-color: var(--main-background-color);
 }

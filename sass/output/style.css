@@ -631,8 +631,7 @@ body {
 }
 @media screen and (min-width: 769px) {
   .statistics {
-    min-width: 300px;
-    flex-shrink: 0;
+    flex-grow: 1;
   }
 }
 .comments__radio-input {

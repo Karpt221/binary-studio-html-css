@@ -47,8 +47,6 @@
 
 @media screen and (min-width: breakpoints.$breakpoint-tablet-max) {
   .statistics {
-   
-    min-width: 300px;
-    flex-shrink: 0;
+    flex-grow: 1;
   }
 }

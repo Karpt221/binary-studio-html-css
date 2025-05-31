@@ -7,44 +7,43 @@
     <link rel="stylesheet" href="./sass/output/style.css" />
   </head>
   <body>
-    <div class="main-wrapper">
-      <div class="spcing section-spacing-sm"></div>
-      <header class="header">
-        <div class="logo">
-          <img class="logo__image" src="./images/logo-cat.png" alt="cat logo" />
-          <h1 class="logo__title text-title color-orange">Cotademy</h1>
-        </div>
+    <header class="header">
+      <div class="logo">
+        <img class="logo__image" src="./images/logo-cat.png" alt="cat logo" />
+        <h1 class="logo__title text-title color-orange">Cotademy</h1>
+      </div>
 
-        <nav class="menu">
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a class="menu__link text-button-small" href="#">About</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link text-button-small" href="#">Contacts</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link text-button-small" href="#">Lessons</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link text-button-small" href="#">Gallery</a>
-            </li>
-            <li class="menu__item">
-              <a
-                class="menu__link button button--primary text-button-small"
-                href="#"
-                >Subscribe</a
-              >
-            </li>
-          </ul>
-          <input id="menu-toggle" class="menu__toggle" type="checkbox" />
-          <label
-            class="menu__button button button--secondary icon-cat-paw"
-            for="menu-toggle"
-          >
-          </label>
-        </nav>
-      </header>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link text-button-small" href="#">About</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link text-button-small" href="#">Contacts</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link text-button-small" href="#">Lessons</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link text-button-small" href="#">Gallery</a>
+          </li>
+          <li class="menu__item">
+            <a
+              class="menu__link button button--primary text-button-small"
+              href="#"
+              >Subscribe</a
+            >
+          </li>
+        </ul>
+        <input id="menu-toggle" class="menu__toggle" type="checkbox" />
+        <label
+          class="menu__button button button--secondary icon-cat-paw"
+          for="menu-toggle"
+        >
+        </label>
+      </nav>
+    </header>
+    <div class="main-wrapper">
       <main>
         <section class="intro">
           <img
@@ -129,7 +128,8 @@
               <section class="comment__info">
                 <h3 class="comment__username text-button">Sarah Smith</h3>
                 <p class="comment__text text-inner-small">
-                  I've really enjoyed the lessons and the videos are so fun! I'll recommend it to my friends!
+                  I've really enjoyed the lessons and the videos are so fun!
+                  I'll recommend it to my friends!
                 </p>
               </section>
             </section>
@@ -142,7 +142,8 @@
               <section class="comment__info comment--3">
                 <h3 class="comment__username text-button">Sam Kollins</h3>
                 <p class="comment__text text-inner-small">
-                  Every day I'm trying to find some time and watch few lessons. It's hilarious! 
+                  Every day I'm trying to find some time and watch few lessons.
+                  It's hilarious!
                 </p>
               </section>
             </section>
@@ -172,7 +173,63 @@
             </section>
           </article>
         </section>
-        <section class="opportunities"></section>
+        <div class="spcing section-spacing-sm"></div>
+        <section class="opportunities">
+          <h2 class="opportunities__title text-title">
+            Explore all opportunities of Catademy
+          </h2>
+          <p class="opportunities__subtitle text-inner-small">
+            You can find here tons of useful information and interesting, fun
+            content. All in one place. Let's go!
+          </p>
+          <div class="section-spacing-xlg"></div>
+          <div class="opportunities__cards">
+            <article class="opportunity opportunity--purple">
+              <img
+                src="./images/opportunities/cat-house.png"
+                alt="cat in the small house"
+                class="opportunity__image opportunity__image--cat-house"
+              />
+              <div class="opportunity__content">
+                <h3 class="opportunity__title text-button">Group lessons</h3>
+                <p class="opportunity__description text-inner-small">
+                  Make new friends, join teams and learn in a fun and productive
+                  way. We are waiting for you!
+                </p>
+              </div>
+            </article>
+            <div class="section-spacing-xlg"></div>
+            <article class="opportunity opportunity--orange">
+              <img
+                src="./images/opportunities/cat-alien.png"
+                alt="UFO with a cat's face"
+                class="opportunity__image opportunity__image--cat-ufo"
+              />
+              <div class="opportunity__content color-purple">
+                <h3 class="opportunity__title text-button">Videos</h3>
+                <p class="opportunity__description text-inner-small">
+                  Search among more than 500 videos and you will definitely find
+                  something interesting for you.
+                </p>
+              </div>
+            </article>
+            <div class="section-spacing-xlg"></div>
+            <article class="opportunity opportunity--purple">
+              <img
+                src="./images/opportunities/cable-cat.png"
+                alt="cat with a cable in their paw"
+                class="opportunity__image opportunity__image--cat-cable"
+              />
+              <div class="opportunity__content">
+                <h3 class="opportunity__title text-button">Quizzes</h3>
+                <p class="opportunity__description text-inner-small">
+                  Test your knowledge in various tests and quizzes personally
+                  selected for you
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
         <section class="gallery"></section>
         <section class="subscribe"></section>
       </main>

@@ -86,7 +86,6 @@ h6 {
 }
 
 body {
-  height: 100vh;
   font-family: var(--base-font-family);
   font-size: 16px;
   line-height: 1.5;
@@ -311,6 +310,10 @@ body {
   margin-bottom: 80px;
 }
 
+.section-spacing-xlg {
+  margin-bottom: 100px;
+}
+
 .vertical-spacing-line-sm {
   margin: 20px 0;
   height: 4px;
@@ -400,7 +403,7 @@ body {
     justify-content: flex-start;
     align-items: stretch;
     flex-wrap: nowrap;
-    gap: 32px;
+    gap: clamp(0.063rem, -2.009rem + 4.315vw, 1.875rem);
     flex-direction: row;
   }
   .menu__button {
@@ -444,6 +447,14 @@ body {
   flex-wrap: nowrap;
   gap: 0px;
   flex-direction: row;
+  position: sticky;
+  top: 0;
+  background-color: #1a173d;
+  z-index: 999;
+  padding: 15px 0;
+  padding: 30px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .intro {
@@ -455,7 +466,7 @@ body {
   flex-direction: column;
 }
 .intro__image {
-  height: 262px;
+  height: clamp(16.375rem, 12.957rem + 14.021vw, 19.688rem);
   transform: scaleX(-1);
   z-index: 1;
   position: relative;
@@ -480,6 +491,7 @@ body {
 }
 .intro__title {
   text-align: center;
+  font-size: clamp(1.875rem, 1.488rem + 1.587vw, 2.25rem);
 }
 .intro__subtitle {
   padding: 0 15px;
@@ -513,7 +525,7 @@ body {
     gap: 12px;
   }
   .intro__title {
-    font-size: 36px;
+    font-size: clamp(2.25rem, -0.821rem + 6.399vw, 4.938rem);
     text-align: start;
   }
   .intro__content {
@@ -523,14 +535,15 @@ body {
   }
   .intro__subtitle-image {
     display: block;
-    width: 70px;
+    height: clamp(4.375rem, 3.732rem + 1.339vw, 4.938rem);
   }
   .intro__subtitle {
     padding: 0 30px;
+    font-size: clamp(1rem, 0.429rem + 1.19vw, 1.5rem);
   }
   .intro__image {
+    height: clamp(19.688rem, 7.188rem + 26.042vw, 30.625rem);
     top: 0;
-    height: 315px;
   }
   .intro__subtitle-layout {
     align-items: center;
@@ -545,9 +558,6 @@ body {
   }
 }
 @media screen and (min-width: 769px) {
-  .intro__title {
-    font-size: 70px;
-  }
   .intro__content {
     padding: 50px;
   }
@@ -557,9 +567,6 @@ body {
   .intro__subtitle {
     padding: 0 30px;
     font-size: 24px;
-  }
-  .intro__image {
-    height: 490px;
   }
   .intro__buttons-layout {
     justify-content: space-around;
@@ -715,6 +722,122 @@ body {
     height: auto;
     margin: 0 20px;
     flex-shrink: 0;
+  }
+}
+.opportunities__title {
+  margin-bottom: 15px;
+}
+
+.opportunity {
+  position: relative;
+  padding: 130px 30px 30px;
+  overflow: visible;
+}
+.opportunity::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: skewY(6deg);
+  z-index: -1;
+  border-radius: 25px;
+}
+.opportunity--orange::before {
+  background: radial-gradient(rgb(245, 194, 146) 25%, rgb(241, 150, 65) 85%);
+}
+.opportunity--purple::before {
+  background: linear-gradient(rgb(133, 100, 187) 0%, rgb(102, 44, 197) 85%);
+}
+.opportunity__title {
+  text-align: center;
+  margin-bottom: 19px;
+}
+.opportunity__image {
+  position: absolute;
+  top: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.opportunity__image--cat-house {
+  height: 235px;
+}
+.opportunity__image--cat-ufo {
+  height: 250px;
+}
+.opportunity__image--cat-cable {
+  height: 200px;
+}
+
+@media screen and (min-width: 391px) {
+  .opportunities__cards {
+    padding: 0 60px;
+  }
+  .opportunities__title {
+    font-size: 36px;
+    width: 60%;
+  }
+  .opportunities__subtitle {
+    font-size: 18px;
+    width: 80%;
+  }
+  .opportunity {
+    padding: 60px 30% 60px 30px;
+  }
+  .opportunity__title {
+    font-size: 34px;
+  }
+  .opportunity__description {
+    font-size: 18px;
+  }
+  .opportunity__image {
+    top: 0;
+    left: 70%;
+    transform: translateX(0%);
+  }
+  .opportunity__image--cat-house {
+    height: 250px;
+  }
+  .opportunity__image--cat-cable {
+    height: 230px;
+  }
+  .opportunity::before {
+    transform: skewY(3deg);
+  }
+}
+@media screen and (min-width: 769px) {
+  .opportunities__cards {
+    display: flex;
+    padding: 0;
+    gap: 15px;
+  }
+  .opportunities__title {
+    font-size: 48px;
+  }
+  .opportunities__subtitle {
+    font-size: 18px;
+  }
+  .opportunity {
+    flex: 1;
+    padding: 220px 30px 60px 30px;
+  }
+  .opportunity__image {
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .opportunity__image--cat-house {
+    height: 320px;
+  }
+  .opportunity__image--cat-ufo {
+    height: 340px;
+  }
+  .opportunity__image--cat-cable {
+    height: 290px;
+  }
+  .opportunity::before {
+    transform: skewY(3deg);
   }
 }
 

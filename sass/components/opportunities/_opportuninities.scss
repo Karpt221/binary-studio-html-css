@@ -1,11 +1,6 @@
 @use '../../abstracts/variables/breakpoints';
 @use '../../abstracts/variables/colors';
 
-.opportunities {
-  &__title {
-    margin-bottom: 15px;
-  }
-}
 
 .opportunity {
   position: relative;
@@ -115,6 +110,7 @@
     flex: 1;
     padding: 220px 30px 60px 30px;
     &__image {
+      min-width: 290px;
       top: -100px;
       left: 50%;
       transform: translateX(-50%);

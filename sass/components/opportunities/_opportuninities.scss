@@ -11,7 +11,8 @@
   position: relative;
   padding: 130px 30px 30px;
   overflow: visible;
-
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
   &::before {
     content: '';
     position: absolute;
@@ -23,10 +24,13 @@
     z-index: -1;
     border-radius: 25px;
   }
-  &--orange::before {
-    background: colors.$orange-gradient;
+  &:hover {
+    color: colors.$main-purple;
+    &::before {
+      background: colors.$orange-gradient;
+    }
   }
-  &--purple::before {
+  &::before {
     background: colors.$purple-gradient;
   }
   &__title {
@@ -99,7 +103,7 @@
       padding: 0;
       gap: 15px;
     }
-     &__title {
+    &__title {
       font-size: 48px;
     }
     &__subtitle {

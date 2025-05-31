@@ -732,6 +732,8 @@ body {
   position: relative;
   padding: 130px 30px 30px;
   overflow: visible;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 .opportunity::before {
   content: "";
@@ -744,10 +746,13 @@ body {
   z-index: -1;
   border-radius: 25px;
 }
-.opportunity--orange::before {
+.opportunity:hover {
+  color: #5133a6;
+}
+.opportunity:hover::before {
   background: radial-gradient(rgb(245, 194, 146) 25%, rgb(241, 150, 65) 85%);
 }
-.opportunity--purple::before {
+.opportunity::before {
   background: linear-gradient(rgb(133, 100, 187) 0%, rgb(102, 44, 197) 85%);
 }
 .opportunity__title {

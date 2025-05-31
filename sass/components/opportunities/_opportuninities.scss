@@ -51,8 +51,16 @@
 }
 
 @media screen and (min-width: breakpoints.$breakpoint-mobile-max) {
-  .opportunities__cards {
-    padding: 0 60px;
+  .opportunities {
+    &__cards {
+      padding: 0 60px;
+    }
+    &__title {
+      width: 60%;
+    }
+    &__subtitle {
+      width: 80%;
+    }
   }
   .opportunity {
     padding: 60px 30% 60px 30px;
@@ -84,6 +92,27 @@
   }
 }
 
-// @media screen and (min-width: breakpoints.$breakpoint-tablet-max) {
+@media screen and (min-width: breakpoints.$breakpoint-tablet-max) {
+  .opportunities {
+    &__cards {
+      display: flex;
+    }
+  }
 
-// }
+  .opportunity {
+    padding: 60px 30px 60px 30px;
+    &__image--cat-house {
+      height: 320px;
+    }
+    &__image--cat-ufo {
+      height: 340px;
+    }
+    &__image--cat-cable {
+      height: 290px;
+    }
+
+    &::before {
+      transform: skewY(3deg);
+    }
+  }
+}

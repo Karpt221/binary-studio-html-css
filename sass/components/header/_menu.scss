@@ -38,7 +38,7 @@
 
 @media screen and (min-width: breakpoints.$breakpoint-tablet-max) {
   .menu__list {
-    @include flex.flex-row($gap: 32px);
+    @include flex.flex-row($gap: clamp(0.063rem, -2.009rem + 4.315vw, 1.875rem));
   }
   .menu__button {
     display: none;

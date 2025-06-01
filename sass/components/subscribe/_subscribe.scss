@@ -21,7 +21,7 @@
     padding: 10px 33px;
   }
   &__image {
-    height: clamp(15.688rem, 11.689rem + 16.402vw, 19.563rem);
+    height: 261px;
     position: absolute;
     top: -170px;
     left: 50%;
@@ -33,7 +33,7 @@
   }
 }
 
-@media screen and (min-width: breakpoints.$breakpoint-mobile-max) {
+@media screen and (min-width: calc(breakpoints.$breakpoint-mobile-max + 300px)) {
   .subscribe {
     padding-left: 42px;
     padding-right: 42px;
@@ -78,7 +78,7 @@
       font-size: 48px;
     }
     &__subtitle-alt {
-      width:650px;
+      width: 650px;
     }
     &__image {
       top: -175px;

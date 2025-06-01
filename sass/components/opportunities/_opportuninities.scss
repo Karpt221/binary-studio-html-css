@@ -46,7 +46,7 @@
   }
 }
 
-@media screen and (min-width: breakpoints.$breakpoint-mobile-max) {
+@media screen and (min-width: calc(breakpoints.$breakpoint-mobile-max + 300px)) {
   .opportunities {
     &__cards {
       padding: 0 60px;

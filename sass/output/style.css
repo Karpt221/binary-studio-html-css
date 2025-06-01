@@ -543,12 +543,6 @@ body {
 }
 
 @media screen and (min-width: 391px) {
-  .intro {
-    margin-top: 52px;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    gap: 12px;
-  }
   .intro__title {
     font-size: clamp(2.25rem, -0.821rem + 6.399vw, 4.938rem);
     text-align: start;
@@ -568,7 +562,6 @@ body {
   }
   .intro__image {
     height: clamp(19.688rem, 7.188rem + 26.042vw, 30.625rem);
-    top: 0;
   }
   .intro__subtitle-layout {
     align-items: center;
@@ -580,6 +573,17 @@ body {
   .intro__button {
     padding: 10px;
     width: 150px;
+  }
+}
+@media screen and (min-width: 759px) {
+  .intro {
+    margin-top: 52px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .intro__image {
+    top: 0;
   }
 }
 @media screen and (min-width: 769px) {
@@ -795,7 +799,7 @@ body {
   height: 200px;
 }
 
-@media screen and (min-width: 391px) {
+@media screen and (min-width: 691px) {
   .opportunities__cards {
     padding: 0 60px;
   }
@@ -945,7 +949,7 @@ body {
   padding: 10px 33px;
 }
 .subscribe__image {
-  height: clamp(15.688rem, 11.689rem + 16.402vw, 19.563rem);
+  height: 261px;
   position: absolute;
   top: -170px;
   left: 50%;
@@ -960,7 +964,7 @@ body {
   flex-direction: column;
 }
 
-@media screen and (min-width: 391px) {
+@media screen and (min-width: 691px) {
   .subscribe {
     padding-left: 42px;
     padding-right: 42px;

@@ -52,11 +52,6 @@
 
 @media screen and (min-width: breakpoints.$breakpoint-mobile-max) {
   .intro {
-    margin-top: 52px;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    gap: 12px;
-
     &__title {
       font-size: clamp(2.25rem, -0.821rem + 6.399vw, 4.938rem);
       text-align: start;
@@ -76,7 +71,6 @@
     }
     &__image {
       height: clamp(19.688rem, 7.188rem + 26.042vw, 30.625rem);
-      top: 0;
     }
     &__subtitle-layout {
       align-items: center;
@@ -88,6 +82,18 @@
     &__button {
       padding: 10px;
       width: 150px;
+    }
+  }
+}
+
+@media screen and (min-width: calc(breakpoints.$breakpoint-tablet-max - 10px)) {
+  .intro {
+    margin-top: 52px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 12px;
+    &__image {
+      top: 0;
     }
   }
 }
